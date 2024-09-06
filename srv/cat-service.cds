@@ -1,5 +1,5 @@
-using my.bookshop as my from '../db/schema';
+using my.salesorder as my from '../db/schema';
 
 service CatalogService {
-    @readonly entity Books as projection on my.Books;
+    @readonly entity Salesorder as projection on my.Salesorder;
 }

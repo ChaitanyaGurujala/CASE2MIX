@@ -1,7 +1,13 @@
-namespace my.bookshop;
+namespace my.salesorder;
 
-entity Books {
-  key ID : Integer;
-  title  : String;
-  stock  : Integer;
+entity Salesorder {
+  key ID            : String;
+      customerName  : String;
+      salesordernum : Integer;
+      addline1      : String;
+      addline2      : String;
+      city          : String;
+      state         : String;
+      country       : String;
+      zipcode       : Integer;
 }
