@@ -54,12 +54,12 @@ modules:
     build-result: app/
     requires:
     - artifacts:
-      - case2fe.zip
-      name: case2fe
+      - case02fe.zip
+      name: case02fe
       target-path: app//
-- name: case2fe
+- name: case02fe
   type: html5
-  path: app/case2fe
+  path: app/case02fe
   build-parameters:
     build-result: dist
     builder: custom
@@ -95,9 +95,18 @@ resources:
             ProxyType: Internet
             Type: HTTP
             URL: https://ui5.sap.com
+          - Authentication: NoAuthentication
+            HTML5.DynamicDestination: true
+            HTML5.ForwardAuthToken: true
+            Name: case2mix-srv-api
+            ProxyType: Internet
+            Type: HTTP
+            URL: ~{srv-api/srv-url}
           existing_destinations_policy: update
     service: destination
     service-plan: lite
+  requires:
+  - name: srv-api
 - name: case2mix-html5-repo-host
   type: org.cloudfoundry.managed-service
   parameters:

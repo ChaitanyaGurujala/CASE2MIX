@@ -23,7 +23,8 @@
     "watch-case2fe": "cds watch --open case2fe/webapp/index.html?sap-ui-xx-viewCache=false",
     "undeploy": "cf undeploy case2mix --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-case02fe": "cds watch --open case02fe/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
